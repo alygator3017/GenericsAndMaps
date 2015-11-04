@@ -34,15 +34,10 @@ public class Challenge3 {
         List list = new ArrayList();
         list.addAll(key2);
         
-        System.out.println(list.get(1));
         
-        Collections.sort(list);
-        
-        System.out.println(list.get(1));
-        
-//        for(int i = 0; i < list.size(); i ++){
-//            System.out.println(list.get(i));
-//        }
+        for(Object e : list){
+            System.out.println(e);
+        }
         
     }
 }
