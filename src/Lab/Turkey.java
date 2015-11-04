@@ -2,6 +2,7 @@ package Lab;
 
 import common.Employee;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -85,8 +86,8 @@ public class Turkey implements Comparable {
 
     public static void main(String[] args) {
         Turkey t1 = new Turkey(10,1);
-        Turkey t2 = new Turkey(20, 3);
-        Turkey t3 = new Turkey(13, 1);
+        Turkey t2 = new Turkey(20, 1);
+        Turkey t3 = new Turkey(13, 2);
         Turkey t4 = new Turkey(14, 3);
         
         List<Turkey> turkeys = new ArrayList<>();
@@ -95,11 +96,9 @@ public class Turkey implements Comparable {
         turkeys.add(t3);
         turkeys.add(t4);
         
-        Set<Turkey> set = new TreeSet<>(turkeys);
+        Collections.sort(turkeys, new TurkeyByWeight());
         
-        List<Turkey> list = new ArrayList<>(set);
-        
-        for(Turkey t : list){
+        for(Turkey t : turkeys){
             System.out.println(t);
         }
     }
