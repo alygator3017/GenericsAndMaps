@@ -1,6 +1,8 @@
 package Lab;
 
 import common.Employee;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import org.apache.commons.lang3.builder.CompareToBuilder;
@@ -87,13 +89,17 @@ public class Turkey implements Comparable {
         Turkey t3 = new Turkey(13, 1);
         Turkey t4 = new Turkey(14, 3);
         
-        Set<Turkey> turkeys = new TreeSet<>();
+        List<Turkey> turkeys = new ArrayList<>();
         turkeys.add(t1);
         turkeys.add(t2);
         turkeys.add(t3);
         turkeys.add(t4);
         
-        for(Turkey t : turkeys){
+        Set<Turkey> set = new TreeSet<>(turkeys);
+        
+        List<Turkey> list = new ArrayList<>(set);
+        
+        for(Turkey t : list){
             System.out.println(t);
         }
     }
