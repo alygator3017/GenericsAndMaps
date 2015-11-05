@@ -80,6 +80,7 @@ public class Employee implements Comparable {
         Employee o = (Employee)other;
         
         return new CompareToBuilder()
+               .append(this.empID, o.empID)
                .append(this.ssn, o.ssn)
                .toComparison();
 //        // NO Magic numbers! Use constants for readability!
@@ -101,6 +102,7 @@ public class Employee implements Comparable {
 //
 //        return EQUAL; // default
     }
+
 
     public String getSsn() {
         return ssn;

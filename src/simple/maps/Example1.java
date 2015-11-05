@@ -39,7 +39,7 @@ public class Example1 {
                 
         // store them in a non-generified map (backward compatible)
         // implementations - Hashtable, HashMap and LinkedHashMap -- try all 3!
-        Map map = new LinkedHashMap(); // edit this!
+        Map map = new HashMap(); // edit this!
         map.put("333-33-3333", e1);
         map.put("111-11-1111", e2);
         
