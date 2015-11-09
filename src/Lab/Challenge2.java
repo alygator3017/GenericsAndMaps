@@ -34,6 +34,7 @@ public class Challenge2 {
         mEmpID.put(e1.getEmpID(), e1);
         mEmpID.put(e4.getEmpID(), e4);
         
+        System.out.println("showing keys in order because it is a integer and not a string");
         Set keys = mEmpID.keySet();
         for(Object key: keys){
             System.out.println(key);
@@ -44,7 +45,7 @@ public class Challenge2 {
         
         Set<Employee> eSet = new HashSet<>();
         for(Object objKey : keys){
-            eSet.add((Employee)mEmpID.get(objKey));
+            eSet.add((Employee)mEmpID.get((Integer)objKey));
         }
         //showing set
         System.out.println("Looping through the map that has been put into a set:");
@@ -75,6 +76,10 @@ public class Challenge2 {
         
         keys = mSsn.keySet();
         
+        System.out.println("Keys coming out not in order");
+        for(Object objKey: keys){
+            System.out.println(objKey);
+        }
         eSet = new HashSet<>();
         for(Object objKey: keys){
             eSet.add((Employee)mSsn.get((String)objKey));
