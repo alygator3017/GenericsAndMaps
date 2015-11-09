@@ -28,7 +28,7 @@ public class Challenge2 {
 //        set.add(e3);
 //        set.add(e4);
         //USING empID AS A KEY 
-        Map mEmpID = new HashMap();
+        Map<Integer, Employee> mEmpID = new HashMap();
         mEmpID.put(e3.getEmpID(), e3);
         mEmpID.put(e2.getEmpID(), e2);
         mEmpID.put(e1.getEmpID(), e1);
