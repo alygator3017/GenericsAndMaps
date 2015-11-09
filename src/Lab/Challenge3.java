@@ -18,7 +18,7 @@ public class Challenge3 {
     public static void main(String[] args) {
         
         Employee e2 = new Employee(3, "Pond", "Amy", "888-88-8888");
-        Employee e1 = new Employee(4, "Pond", "Rory", "444-44-4444");
+        Employee e1 = new Employee(3, "Pond", "Rory", "444-44-4444");
         Employee e3 = new Employee(5, "Song", "River", "555-55-5555");
         Employee e4 = new Employee(6, "Malone", "Melody", "555-55-5555");
     
@@ -52,5 +52,17 @@ public class Challenge3 {
             System.out.println(e);
         }
         
+        System.out.println("using ssn instead of id");
+        Map<String, Employee> ssnMap = new TreeMap<>();
+        
+        for(Employee e : empList){
+            ssnMap.put(e.getSsn(), e);
+        }
+        
+        keys = ssnMap.keySet();
+        System.out.println("Checking to make sure ssn's sorted in TreeMap: ");
+        for(Object key : keys){
+            System.out.println(map.get((Integer)key));
+        }
     }
 }
