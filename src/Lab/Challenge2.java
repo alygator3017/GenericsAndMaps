@@ -18,7 +18,7 @@ import java.util.TreeSet;
 public class Challenge2 {
     public static void main(String[] args) {
         Employee e1 = new Employee(3, "Pond", "Amy", "888-88-8888");
-        Employee e2 = new Employee(4, "Pond", "Rory", "444-44-4444");
+        Employee e2 = new Employee(3, "Pond", "Rory", "444-44-4444");
         Employee e3 = new Employee(5, "Song", "River", "555-55-5555");
         Employee e4 = new Employee(6, "Malone", "Melody", "555-55-5555");
         
@@ -28,7 +28,7 @@ public class Challenge2 {
 //        set.add(e3);
 //        set.add(e4);
         //USING empID AS A KEY 
-        Map<Integer, Employee> mEmpID = new HashMap();
+        Map<Integer, Employee> mEmpID = new HashMap<>();
         mEmpID.put(e3.getEmpID(), e3);
         mEmpID.put(e2.getEmpID(), e2);
         mEmpID.put(e1.getEmpID(), e1);
