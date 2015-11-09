@@ -42,7 +42,7 @@ public class Challenge3 {
         
         List<Employee> list = new ArrayList<>();
         for(Object key : keys){
-            list.add(map.get(key));
+            list.add(map.get((Integer)key));
         }
         
         Collections.sort(list, new EmployeeByLastName());
