@@ -41,8 +41,8 @@ public class Challenge3 {
         }
         
         List<Employee> list = new ArrayList<>();
-        for(int i = 3; i < map.size() + 3; i++){
-            list.add(map.get(i));
+        for(Object key : keys){
+            list.add(map.get(key));
         }
         
         Collections.sort(list, new EmployeeByLastName());
@@ -62,7 +62,7 @@ public class Challenge3 {
         keys = ssnMap.keySet();
         System.out.println("Checking to make sure ssn's sorted in TreeMap: ");
         for(Object key : keys){
-            System.out.println(map.get((Integer)key));
+            System.out.println(ssnMap.get((String)key));
         }
     }
 }
